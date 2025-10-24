@@ -168,3 +168,19 @@ for ticker in NIFTY_50_TICKERS:
     time.sleep(1)
 
 print("\n--- Stock Universe Download Complete ---")
+
+## Final Commands
+Run the training script (to create regime_model_oos.pkl):
+
+Bash
+
+python train_selector_model.py
+Note the OOS start date it prints (e.g., 2023-09-08).
+
+Edit run_hybrid_backtest.py and replace 'YYYY-MM-DD' in the oos_start_date_str variable with the date from step 2. Save the file.
+
+Run the hybrid backtest:
+
+Bash
+
+python run_hybrid_backtest.py
